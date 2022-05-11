@@ -1,3 +1,33 @@
 body {
     background-color: salmon;
 }
+body {font-family: Arial, Helvetica, sans-serif;}
+.navbar {
+  box-sizing: border-box;
+  position: absolute;
+  width: 1226px;
+  height: 96px;
+  left: 663px;
+  top: 10px;
+  background-color: #555;
+  --overflow: auto;
+}
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+.navbar a:hover {
+  background-color: #000;
+}
+.active {
+  background-color: #C1C8C6;
+}
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
