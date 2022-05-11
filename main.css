@@ -38,7 +38,9 @@ body {font-family: Arial, Helvetica, sans-serif;}
   height: 96px;
   left: 220px;
   top: 1739px;
-  }
+
+
+}
 #profileContainer {
   box-sizing: border-box;
   position: absolute;
@@ -46,4 +48,5 @@ body {font-family: Arial, Helvetica, sans-serif;}
   height: 1468px;
   left: 202px;
   top: 21px;
+  border: 4px solid;
 }
