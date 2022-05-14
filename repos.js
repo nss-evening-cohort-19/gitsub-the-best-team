@@ -65,7 +65,7 @@ const myRepoForm = () => {
   renderToDom("#repoFormContainer", domString);
 };
 
-const eventListeners = () => {
+const repoEventListeners = () => {
   const form = document.querySelector("form");
 
   form.addEventListener("submit", (e) => {
@@ -86,6 +86,6 @@ const eventListeners = () => {
 const startApp = () => {
   myRepoCards(repos);
   myRepoForm();
-  eventListeners();
+  repoEventListeners();
 };
 startApp();
