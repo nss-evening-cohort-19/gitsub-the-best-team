@@ -1,4 +1,4 @@
-//import { renderToDom } from "./main.js"
+import { renderToDom } from "./main.js"
 
 export const packagesList = [
   {
@@ -40,7 +40,7 @@ export const packagesList = [
 ];
 
 //CARDS
-const packagesCardsOnDom = (cards) => {
+export const packagesCardsOnDom = (cards) => {
   let domString = "";
   for (const pack of packagesList) {
       domString += 
@@ -61,7 +61,7 @@ const packagesCardsOnDom = (cards) => {
 
 
 //FORM
-const newPackageForm = () => {
+export const newPackageForm = () => {
   const domString = 
   `<h4>Create New Package</h4>
     <p>
@@ -70,15 +70,15 @@ const newPackageForm = () => {
   <form>
     <div class="mb-3">
      <label for="exampleFormControlInput1" class="form-label">Package Name</label>
-     <input type="text" class="form-control" id="packageName" placeholder="Example 1">
+     <input type="text" class="form-control" id="packagesName" placeholder="Example 1">
      </div>
     <div class="mb-3">
-     <label for="exampleFormControlInput1" class="form-label">Link</label>
-     <input type="text" class="form-control" id="logo" placeholder="Link">
+    <label for="exampleFormControlInput1" class="form-label">Description</label>
+    <input type="text" class="form-control" id="description" placeholder="Optional">
      </div>
     <div class="mb-3">
-     <label for="exampleFormControlInput1" class="form-label">Description</label>
-     <input type="text" class="form-control" id="description" placeholder="Optional">
+    <label for="exampleFormControlInput1" class="form-label">Link</label>
+    <input type="text" class="form-control" id="link" placeholder="Link">
     </div>
     <hr>
     <button class="btn btn-success" type="save">Create New Package</button>
@@ -87,17 +87,16 @@ renderToDom("#packagesFormContainer", domString);
 }
 
 
-const packagesEventListeners = () => {
+export const packagesEventListeners = () => {
   // LOGIC FOR FORM SUBMIT
   const form = document.querySelector("form");
   form.addEventListener("save", (e) => {
     e.preventDefault();
 
     const newPackage = {
-    
-    name: document.querySelector("#name").value,
-    logo: document.querySelector("#description").value,
-    description: document.querySelector("#learnMoreLink").value,
+    name: document.querySelector("#packagesName").value,
+    description: document.querySelector("#description").value,
+    link: document.querySelector("#learnMoreLink").value,
     }
 
 // push that object to the data array   
