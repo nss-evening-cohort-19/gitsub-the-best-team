@@ -3,11 +3,11 @@ import { packagesCardsOnDom } from "./packagesPage";
 import { packagesEventListeners } from "./packagesPage";
 import { newPackageForm } from "./packagesPage";
 
-
 const renderToDom = (divId, textToRender) => {
   const selectedElement = document.querySelector(divId);
   selectedElement.innerHTML = textToRender;
 };
+
 
 
 // AL-proj-pg
@@ -124,6 +124,7 @@ const rectangle3 = () => {
 
 rectangle1(rectangle);
 rectangle3();
+
 
 
 function startApp () {
