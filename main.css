@@ -26,12 +26,7 @@ body {
 #navContainer a:hover {
   background-color: #000;
 }
-<<<<<<< HEAD
 #navContainer.active {
-=======
-
-.active {
->>>>>>> main
   background-color: #C1C8C6;
 }
 
