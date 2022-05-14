@@ -1,6 +1,6 @@
 //import { renderToDom } from "./main.js"
 
-const packagesList = [
+export const packagesList = [
   {
     id: 1,
     name: "Docker",
