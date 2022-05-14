@@ -1,7 +1,14 @@
+
+
+
+//import { packagesList } from "./packagesPage";
+//import { packagesCardsOnDom } from "./packagesPage";
+
 const renderToDom = (divId, textToRender) => {
   const selectedElement = document.querySelector(divId);
   selectedElement.innerHTML = textToRender
 };
+// AS-pinned
 const pinned = [
 
   {
@@ -69,3 +76,21 @@ const pinned = [
   }
   
   renderRepos(pinned);
+=======
+
+
+
+
+
+
+
+
+function startApp () {
+  packagesCardsOnDom(packagesList);
+  newPackageForm();
+  eventListeners();//always last
+}
+
+//starts app to use funtions above^^
+startApp();
+// main

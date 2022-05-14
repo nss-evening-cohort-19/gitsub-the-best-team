@@ -1,18 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Best Team</title>
   <html>
+  <meta name=“viewport” content=“width=device-width, initial-scale=1">
+  <link rel=“stylesheet” href=“https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css”>
 
-<link rel=“stylesheet” href=“https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css”>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
+  <div id="pageContainer">
+    <div id="navContainer">
+      <div class=“navbar”>
+        <a class=“active” href=“#”><i class=“fa fa-fw fa-book”></i>Overview</a>
+        <a href=“#”><i class=“fa fa-fw fa-Repository”></i> Repositories</a>
+        <a href=“#”><i class=“fa fa-fw fa-project”></i> Projects</a>
+        <a href=“#”><i class=“fa fa-fw fa-package”></i> Packages</a>
+      </div>
 
 
 
@@ -20,18 +34,28 @@
 
     
   <div id="navContainer">
-    <div class=“navbar”>
-      <a class=“active” href=“#”><i class=“fa fa-fw fa-book”></i>Overview</a>
-      <a href=“#”><i class=“fa fa-fw fa-Repository”></i> Repositories</a>
-      <a href=“#”><i class=“fa fa-fw fa-project”></i> Projects</a>
-      <a href=“#”><i class=“fa fa-fw fa-package”></i> Packages</a>
+    <div class="navbar">
+      <a class="active" href="#"><i class="fa fa-fw fa-book"></i>Overview</a>
+      <a href="#"><i class="fa fa-fw fa-Repository"></i>Repositories</a>
+      <a href="#"><i class="fa fa-fw fa-project"></i>Projects</a>
+      <a href="./packagesPage.js"><i class="fa fa-fw fa-package"></i>Packages</a>
     </div>
+//// HEAD
+    <div id="profileContainer"></div>
+    <div class="card" style="width: 18rem;">
+=======
   </div>
+
+  <div id="packagesContainer"></div>
+  <div id="packagesFormContainer"></div>
+
     <div id="profileContainer" class="card" style="width: 18rem;">
+/// main
       <img src="https://i.stack.imgur.com/frlIf.png" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Jane Doe</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
       </div>
       <div class="btn-group" role="group" aria-label="Basic outlined example">
         <button type="button" class="btn btn-outline-primary">Follow</button>
@@ -39,17 +63,24 @@
         <button type="button" class="btn btn-outline-primary">...</button>
       </div>
       <ul class="list-group list-group-flush">
-    
+//// HEAD
+        <div class="btn-group-vertical" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-primary">Portland, Maine</button>
+          <button type="button" class="btn btn-primary">email@email.com</button>
+          <button type="button" class="btn btn-primary">personal-link</button>
+          <button type="button" class="btn btn-primary">social media</button>
+        </div>
+=======
           <div class="btn-group-vertical" role="group" aria-label="Basic example">
             <button type="button" class="btn btn-primary">Portland, Maine</button>
             <button type="button" class="btn btn-primary">email@email.com</button>
             <button type="button" class="btn btn-primary">personal-link</button>
             <button type="button" class="btn btn-primary">social media</button>
           </div>
-
+// main
         <li class="list-group-item">Highlights</li>
-          <ul>Hot Dog Eating Champion 2015</ul>
-          <ul>GitHub Star</ul>
+        <ul>Hot Dog Eating Champion 2015</ul>
+        <ul>GitHub Star</ul>
       </ul>
       <div class="card-body">
         <a href="#" class="card-link">Organizations</a>
@@ -57,9 +88,12 @@
       </div>
     </div>
 
+    <div id="repoContainer"></div>
+
     <div id="footContainer" class=“card-footer">
         <a href=“https://docs.github.com/en/github/site-policy/github-terms-of-service” class=“link-primary”>Teams</a>
-        <a href=“https://docs.github.com/en/github/site-policy/github-privacy-statement” class=“link-primary”>Privacy</a>
+        <a href=“https://docs.github.com/en/github/site-policy/github-privacy-statement”
+          class=“link-primary”>Privacy</a>
         <a href=“https://github.com/security” class=“link-primary”>Security</a>
         <a href=“https://www.githubstatus.com/” class=“link-primary”>Status</a>
         <a href=“https://docs.github.com” class=“link-primary”>Docs</a>
@@ -69,14 +103,31 @@
         <a href=“https://services.github.com” class=“link-primary”>Training</a>
         <a href=“https://github.blog” class=“link-primary”>Blog</a>
         <a href=“https://github.com/about” class=“link-primary”>About</a>
+    <div id="footContainer" class="card-footer">
+        <a href="https://docs.github.com/en/github/site-policy/github-terms-of-service" class="link-primary">Teams</a>
+        <a href="https://docs.github.com/en/github/site-policy/github-privacy-statement" class="link-primary">Privacy</a>
+        <a href="https://github.com/security" class="link-primary"> Security </a>
+        <a href="https://www.githubstatus.com/" class="link-primary"> Status </a>
+        <a href=“https://docs.github.com” class="link-primary"> Docs </a>
+        <a href="https://support.github.com?tags=dotcom-footer" class="link-primary"> Contact GitHub </a>
+        <a href="https://github.com/pricing" class="link-primary"> Pricing </a>
+        <a href="https://docs.github.com" class="link-primary"> API </a>
+        <a href="https://services.github.com" class="link-primary"> Training </a>
+        <a href="https://github.blog" class="link-primary"> Blog </a>
+        <a href="https://github.com/about" class="link-primary"> About </a>
     </div>
+/// AS-pinned
     <div id="repoPins"></div>
 
 
+=======
+/// main
   </div>
 
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
   <script src="main.js"></script>
 </body>
+
 </html>
