@@ -4,34 +4,86 @@ body {
 }
 
 #navContainer {
-box-sizing: border-box;
-position: absolute;
-width: 1226px;
-height: 96px;
-left: 663px;
-top: 10px;
-background-color: #555;
---overflow: auto;
+  box-sizing: border-box;
+  position: absolute;
+  width: 1226px;
+  height: 96px;
+  left: 663px;
+  top: 10px;
+  background-color: #555;
 }
+
 #navContainer a {
-float: left;
-padding: 12px;
-color: white;
-text-decoration: none;
-font-size: 17px;
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
 }
+
 #navContainer a:hover {
-background-color: #000;
+  background-color: #000;
 }
+
 .active {
-background-color: #C1C8C6;
+  background-color: #C1C8C6;
 }
+
 @media screen and (max-width: 500px) {
-#navContainer a {
-  float: none;
-  display: block;
+  #navContainer a {
+    float: none;
+    display: block;
+  }
 }
+
+#packagesContainer{
+  box-sizing: border-box;
+  position: absolute;
+  width: 1251px;
+  /* height: 569px; */
+  left: 663px;
+  top: 129px;
+  border: 4px solid;
 }
+
+.card {
+  margin: 12px;
+  text-align: center;
+  background-color: rgb(221, 195, 195);
+  border-style: groove;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card-body {
+  padding: 2px 16px;
+ }
+
+.button{
+  background-color: rgb(77, 68, 68);
+}
+
+#packagesFormContainer{
+  position: absolute;
+  width: 1226px;
+  height: 627px;
+  left: 663px;
+  top: 725px;
+  border: 4px solid
+}
+
+#profileContainer {
+  box-sizing: border-box;
+  position: absolute;
+  width: 445px;
+  height: 1468px;
+  left: 202px;
+  top: 21px;
+  border: 4px solid;
+}
+
 #footContainer{
 box-sizing: border-box;
 position: absolute;
@@ -39,15 +91,5 @@ width: 1714px;
 height: 96px;
 left: 220px;
 top: 1739px;
-
-
-}
-#profileContainer {
-box-sizing: border-box;
-position: absolute;
-width: 445px;
-height: 1468px;
-left: 202px;
-top: 21px;
 border: 4px solid;
 }
