@@ -4,6 +4,7 @@ const repos = [
     name: "my-first-repo",
     info: "I am a young developer and I have no clue what I'm doing.",
     type: "JavaScript",
+    tags: "Netlify"
   },
   {
     id: 2,
@@ -64,6 +65,13 @@ const myRepoCards = () => {
  `;
 }
   renderToDom("#repoContainer", domString)
+}
+
+const myRepoForm = () =>{
+  let domString = `
+  
+  `
+renderToDom("#repoFormContainer", domString)
 }
 
 
