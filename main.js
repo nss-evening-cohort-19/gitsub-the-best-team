@@ -1,9 +1,16 @@
+import { packagesList } from "./packagesPage";
+import { packagesCardsOnDom } from "./packagesPage";
+import { packagesEventListeners } from "./packagesPage";
+import { newPackageForm } from "./packagesPage";
+
+
 const renderToDom = (divId, textToRender) => {
   const selectedElement = document.querySelector(divId);
-  selectedElement.innerHTML = textToRender
+  selectedElement.innerHTML = textToRender;
 };
 
 
+// AL-proj-pg
 //5 projects loop//
 
 const rectangle = [
@@ -116,4 +123,16 @@ const rectangle3 = () => {
 
 
 rectangle1(rectangle);
-rectangle3()
+rectangle3();
+
+
+function startApp () {
+  packagesCardsOnDom(packagesList);
+  newPackageForm();
+  packagesEventListeners();//always last
+}
+
+//starts app to use funtions above^^
+startApp();
+
+
