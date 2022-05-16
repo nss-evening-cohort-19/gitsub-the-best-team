@@ -71,7 +71,7 @@ export const searchPackage = () =>{
       </div>
     </div>
   </form>`;
-  renderToDom('#packafeSearchContainer', searchPackages);
+  renderToDom('#packagesSearchContainer', searchPackages);
 }
 
 
