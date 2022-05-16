@@ -1,5 +1,5 @@
 //5 projects loop//
-import { renderToDom } from "./main";
+// import { renderToDom } from "./main";
 
 export const rectangle = [
     {
