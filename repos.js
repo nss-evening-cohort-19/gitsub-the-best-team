@@ -74,7 +74,7 @@ export const myRepoForm = () => {
       <input type="text" class="form-control" id="tags" placeholder="Optional">
     </div>
     <hr>
-    <button class="btn btn-success" type="submit">Create New Package</button>
+    <button class="btn btn-success" type="submit">Create New Repo</button>
   </form>
   `;
   renderToDom('#repoFormContainer', domString);
