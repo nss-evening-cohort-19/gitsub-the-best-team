@@ -99,7 +99,7 @@ export const newPinnedForm = () => {
     <div id="emailHelp" class="form-text">Tell us about it!</div>
   </div>
 
-<button type="submit" class="btn btn-primary">Submit</button>
+<button type="submit" class="btn btn-success">Submit</button>
 </form>`;
 
   renderToDom("#pinnedFormContainer", domString);
