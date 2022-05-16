@@ -1,4 +1,4 @@
-import { renderToDom } from "./main.js"
+// import { renderToDom } from "./main.js"
 
 export const repos = [
   {
@@ -30,6 +30,11 @@ export const repos = [
     tags: "Jamstack, GoldenFleece",
   },
 ];
+
+export const renderToDom = (divId, textToRender) => {
+  const selectedElement = document.querySelector(divId);
+  selectedElement.innerHTML = textToRender;
+};
 
 export const myRepoCards = () => {
   let domString = "";

@@ -1,4 +1,4 @@
-import { renderToDom } from "./main.js";
+//  import { renderToDom } from "./main.js";
 
 export const packagesList = [
   {
@@ -39,6 +39,11 @@ export const packagesList = [
   }
 ];
 
+
+export const renderToDom = (divId, textToRender) => {
+  const selectedElement = document.querySelector(divId);
+  selectedElement.innerHTML = textToRender;
+};
 //CARDS
 export const packagesCardsOnDom = (cards) => {
   let domString = "";
