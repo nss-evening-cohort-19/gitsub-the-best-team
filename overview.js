@@ -3,8 +3,8 @@ const renderToDom = (divId, textToRender) => {
   selectedElement.innerHTML = textToRender
 };
 
-const deets =[ file, stars];
-const pinned = [
+export const deets =[ file, stars];
+export const pinned = [
 
 
   {
@@ -75,8 +75,8 @@ const pinned = [
   ];
   
   //Pinned Repo to Card loop
-  const repoPins = document.querySelector('#repoPins');
-  const renderRepos = (pinned) => {
+  export const repoPins = document.querySelector('#repoPins');
+  export const renderRepos = (pinned) => {
     let domString = "";
     for (const repo of pinned){ domString +=
   
@@ -97,3 +97,26 @@ const pinned = [
   }
   
   renderRepos(pinned);
+
+  //Pinned Repo form
+  export const newPinnedForm = () => {
+    let domString = 
+
+`<h4>Add New Repo Pin</h4>
+<form>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Pinned Repo Name</label>
+    <input type="text" class="form-control" id= "New Repo name">
+    <div id="repohelp" class="form-text">What repo are you proud of?</div>
+  </div>
+  <div class="mb-3">
+    <label for="pinned-description" class="form-label">Repo Description</label>
+    <input type="text" class="form-control" id="repo-description">
+    <div id="emailHelp" class="form-text">Tell us about it!</div>
+  </div>
+
+<button type="submit" class="btn btn-primary">Submit</button>
+</form>`;
+
+renderToDom("#pinnedFormContainer", domString);
+}
