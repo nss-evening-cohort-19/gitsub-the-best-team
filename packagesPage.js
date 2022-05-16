@@ -1,4 +1,4 @@
-// import { renderToDom } from "./main.js";
+import { renderToDom } from "./main.js";
 
 export const packagesList = [
   {
