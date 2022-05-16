@@ -74,7 +74,7 @@ export const myRepoForm = () => {
   <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
 </div>
 
-  <button type="submit" class="btn btn-primary me-md-2" type="submit">Create Repository</button>
+  <button type="submit" class="btn btn-primary me-md-2" onclick="submit">Create Repository</button>
   </form>
   `;
   renderToDom("#repoFormContainer", domString);
