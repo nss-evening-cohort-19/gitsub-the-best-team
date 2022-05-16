@@ -1,25 +1,21 @@
 //import { rendertoDom } from "./main.js";
 
-
-
-const renderToDom = (divId, textToRender) => {
+export const renderToDom = (divId, textToRender) => {
   const selectedElement = document.querySelector(divId);
-  selectedElement.innerHTML = textToRender
+  selectedElement.innerHTML = textToRender;
 };
 
-export const deets =[ file, stars];
+// export const deets = [ file, stars ];
 export const pinned = [
-
-
   {
     id: 1,
     title: "gatsby-workshop",
-  body: "This workshop covers the fundementals of standing at a dock and pining over lost love in green light",
-  deets: {
-    file: "Javascript",
-    stars: "24",
+    body: "This workshop covers the fundementals of standing at a dock and pining over lost love in green light",
+    deets: {
+      file: "Javascript",
+      stars: "24",
+    },
   },
-},
   {
     id: 2,
     title: "getting-started-with-open-source",
@@ -29,30 +25,26 @@ export const pinned = [
       stars: "65",
     },
   },
-  
   {
     id: 3,
     title: "Rebuild-Black-Business/RBB-Website",
     body: "Website to help connect black-owned businesses with literally everyone",
     deets: {
-     file: "Javascript",
-     stars: "99",
+      file: "Javascript",
+      stars: "99",
     },
   },
-  
+
   {
     id: 4,
     title: "React-Ladies",
     body: "A consortium of women and non-binary that will tell you the best way to react to any social interaction",
     deets: {
       file: "Javascript",
-      stars: "82"
-
+      stars: "82",
     },
-  
-  
   },
-  
+
   {
     id: 5,
     title: "httriri",
@@ -61,10 +53,7 @@ export const pinned = [
       file: "HTML",
       stars: "34",
     },
-  
-  
   },
-  
   {
     id: 6,
     title: "affirmation_generator",
@@ -74,39 +63,30 @@ export const pinned = [
       stars: "∞",
     },
   },
-  
-  
-  ];
-  
-  //Pinned Repo to Card loop
-  export const repoPins = document.querySelector('#repoPins');
-  export const renderRepos = (pinned) => {
-    let domString = "";
-    for (const repo of pinned){ domString +=
-  
-      `<div class="card" style="width: 18rem;">
+];
+
+//Pinned Repo to Card loop
+export const repoPins1 = document.querySelector("#repoPins");
+export const renderRepos = (cards) => {
+  let domString = "";
+  for (const repo of pinned) {
+    domString += `<div class="card" style="width: 18rem;">
       <div class="card-body">
         <h5 class="card-title">${repo.title}</h5>
         <p class="card-text">${repo.body}</p>
         <a href="#" class="card-link">${repo.deets.file}</a>
         <a href="#" class="card-link">${repo.deets.stars}</a>
       </div>
-    </div>`
-  
-  };
-  
-  renderToDom('#repoPins', domString);
-  
-  
+    </div>`;
   }
-  
-  renderRepos(pinned);
+  renderToDom("#repoPins", domString);
+};
 
-  //Pinned Repo form
-  export const newPinnedForm = () => {
-    let domString = 
+// renderRepos(pinned);
 
-`<h4>Add New Repo Pin</h4>
+//Pinned Repo form
+export const newPinnedForm = () => {
+  let domString = `<h4>Add New Repo Pin</h4>
 <form>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Pinned Repo Name</label>
@@ -122,8 +102,8 @@ export const pinned = [
 <button type="submit" class="btn btn-primary">Submit</button>
 </form>`;
 
-renderToDom("#pinnedFormContainer", domString);
-}
+  renderToDom("#pinnedFormContainer", domString);
+};
 
 //Overview Event Listener
 
@@ -133,10 +113,9 @@ export const pinnedEventListeners = () => {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     const newPinnedCard = {
-      id: repos.length + 1,
+      id: pinned.length + 1,
       name: document.querySelector("#title").value,
       info: document.querySelector("#body").value,
-    
     };
     pinned.push(newPinnedCard);
     renderRepos(pinned);
@@ -144,12 +123,9 @@ export const pinnedEventListeners = () => {
   });
 };
 
-
-
-
-function startApp () {
+function startApp() {
   renderRepos(pinned);
   newPinnedForm();
   pinnedEventListeners();
-};
+}
 startApp();
