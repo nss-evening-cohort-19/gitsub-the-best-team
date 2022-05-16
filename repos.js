@@ -49,28 +49,26 @@ export const myRepoCards = () => {
 
 export const myRepoForm = () => {
   let domString = `
+  <h4>Create New Repository</h4>
   <form>
-<div class="input-group input-group-sm mb-3">
-  <span class="input-group-text" id="description" id="name" id="inputGroup-sizing-sm">Repository Name</span></span>
-  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-</div>
-
-<div class="input-group input-group-lg">
-  <span class="input-group-text" id="info" id="inputGroup-sizing-lg">Description</span>
-  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
-</div>
-
-<div class="input-group input-group-lg">
-  <span class="input-group-text" id="type" id="inputGroup-sizing-lg">File Type</span>
-  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
-</div>
-
-<div class="input-group input-group-lg">
-  <span class="input-group-text" id="tags" id="inputGroup-sizing-lg">File Tags</span>
-  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
-</div>
-
-  <button type="submit" class="btn btn-primary me-md-2" onclick="submit">Create Repository</button>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Repository Name</label>
+      <input type="text" class="form-control" id="name" placeholder="Example 1">
+     </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Repository Info</label>
+      <input type="text" class="form-control" id="info" placeholder="Optional">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">File Type</label>
+      <input type="text" class="form-control" id="type" placeholder="Link">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">File Tags</label>
+      <input type="text" class="form-control" id="tags" placeholder="Optional">
+    </div>
+    <hr>
+    <button class="btn btn-success" type="submit">Create New Repo</button>
   </form>
   `;
   renderToDom('#repoFormContainer', domString);
