@@ -36,11 +36,6 @@ export const repos = [
   },
 ];
 
-export const renderToDom = (divId, textToRender) => {
-  const selectedElement = document.querySelector(divId);
-  selectedElement.innerHTML = textToRender;
-};
-
 export const myRepoCards = () => {
   let domString = "";
   for (const card of repos) {
