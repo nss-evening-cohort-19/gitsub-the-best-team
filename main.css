@@ -136,7 +136,27 @@ body {
   height: 478px;
   left: 678px;
   top: 1233px;
-  border: 4px solid
+  border: 4px solid;
+}
+
+#repoPins{
+  box-sizing: border-box;
+  position: absolute;
+  width: 1251px;
+  height: 626px;
+  left: 663px;
+  top: 129px;
+  border: 4px solid;
+}
+
+#pinnedFormContainer{
+  box-sizing: border-box;
+  position: absolute;
+  width: 1226px;
+  height: 664px;
+  left: 663px;
+  top: 764px;
+  border: 4px solid;
 }
 
 .rectangle1 {
