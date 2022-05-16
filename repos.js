@@ -1,4 +1,9 @@
-// import { renderToDom } from "./main.js"
+
+const renderToDom = (divId, textToRender) => {
+  const selectedElement = document.querySelector(divId);
+  selectedElement.innerHTML = textToRender;
+};
+
 
 export const repos = [
   {
@@ -44,7 +49,6 @@ export const myRepoCards = () => {
   <div class="card-body">
     <h5 class="card-title">${card.name}</h5>
     <h6 class="card-subtitle mb-2 text-muted">${card.info}</h6>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     <a href="#" class="card-link">${card.tags}</a>
     <a href="#" class="card-link">${card.type}</a>
   </div>
@@ -77,7 +81,7 @@ export const myRepoForm = () => {
   <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
 </div>
 
-  <button type="submit" class="btn btn-primary me-md-2" type="button">Create Repository</button>
+  <button type="submit" class="btn btn-primary me-md-2" onclick="submit">Create Repository</button>
   </form>
   `;
   renderToDom('#repoFormContainer', domString);
@@ -98,6 +102,15 @@ export const repoEventListeners = () => {
     repos.push(newRepoCard);
     myRepoCards(repos);
     form.reset();
+  });
+
+  document.querySelector("#repoContainer").addEventListener("click", (e) => {
+    if (e.target.id.includes("delete")) {
+      const [method, id] = e.target.id.split("--");
+      const removed = repos.findIndex((pkg) => pkg.id === parseInt(id));
+      packagesList.splice(removed, 1);
+      myRepoCards(repos);
+    }
   });
 };
 
