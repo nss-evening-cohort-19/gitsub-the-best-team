@@ -1,4 +1,9 @@
 
+const renderToDom = (divId, textToRender) => {
+  const selectedElement = document.querySelector(divId);
+  selectedElement.innerHTML = textToRender;
+};
+
 export const repos = [
   {
     id: 1,
