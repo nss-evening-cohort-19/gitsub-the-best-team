@@ -1,6 +1,6 @@
 //5 projects loop//
 
-import { renderToDom } from "./main.js";
+// import { renderToDom } from "./main.js";
 
 
 export const rectangle = [
@@ -44,67 +44,51 @@ export const rectangle = [
 ];
 
 
-
-
-
-
-//Keep shit clean!//
-// const renderToDom = (divId, textToRender) => {
-//     const selectedElement = document.querySelector(divId);
-//     selectedElement.innerHTML = textToRender
-// };
-
-
-
+// Keep shit clean!//
+const renderToDom = (divId, textToRender) => {
+    const selectedElement = document.querySelector(divId);
+    selectedElement.innerHTML = textToRender
+};
 
 //Rectangle 1/ - Sort scroll with 5 projects//
 
-export const rectangle1 = (yomama) => {
+export const rectangle1 = (cards) => {
     let domString = '';
-    for (const item of yomama) {
-        domString += `
+    for (const item of rectangle) {
+        domString += 
+        `
         <div class="card" style="width: 18rem;">
-        <div class="card-header">
+            <div class="card-header">
         Open  
-         <div class="btn-group" role="group">
-        <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+             <div class="btn-group" role="group">
+            <button id="btnGroupDrop1" type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
         Sort
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-        <li><a class="dropdown-item" href="#">Newest</a></li>
-        <li><a class="dropdown-item" href="#">Oldest</a></li>
-        <li><a class="dropdown-item" href="#">Recently Updated</a></li>
-        <li><a class="dropdown-item" href="#">Least recently updated</a></li>
-        <li><a class="dropdown-item" href="#">Name</a></li>
-        </ul>
-        </div>
-        </div>
-        </div>
-        <ul class="list-group list-group-flush">
-        <li class="list-group-item">${item.name}</li>
-        <p class="card-text">${item.description}</p>
-        <p class="card-text">${item.type}</p>
-        <p class="card-text">${item.time}</p>
-
-
-      
-
-             </ul>
-                </div>`;
- 
-            }
+             </button>
+            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+            <li><a class="dropdown-item" href="#">Newest</a></li>
+            <li><a class="dropdown-item" href="#">Oldest</a></li>
+            <li><a class="dropdown-item" href="#">Recently Updated</a></li>
+            <li><a class="dropdown-item" href="#">Least recently updated</a></li>
+            <li><a class="dropdown-item" href="#">Name</a></li>
+            </ul>
+            </div>
+            </div>
+            <ul class="list-group list-group-flush">
+            <li class="list-group-item">${item.name}</li>
+            <p class="card-text">${item.description}</p>
+            <p class="card-text">${item.type}</p>
+            <p class="card-text">${item.time}</p>
+            </ul>
+            </div>`;
+    }
     renderToDom("#rectangle1", domString);
-}
-
-
-
-// rectangle1()
+};
 
 
 //Rectangle 1/ - Sort scroll with 5 projects//
 
- const rectangle2 = document.querySelector("#rectangle1");
- const rectangle1 = (yomama) => {
+ export const rectangle2 = document.querySelector("#rectangle1");
+ const rectangle4= (yomama) => {
    let domString = '';
    for (const item of yomama) {
        domString += `
@@ -130,17 +114,14 @@ export const rectangle1 = (yomama) => {
        <p class="card-text">${item.description}</p>
        <p class="card-text">${item.type}</p>
        <p class="card-text">${item.time}</p>
-
-
-    
-
             </ul>
                </div>`;
-
            }
           renderToDom("#rectangle1", domString);
 
  };
+
+
 
 
 // //Rectangle 3//
@@ -159,24 +140,20 @@ const rectangle3 = () => {
      <label for="description" class="form-label">Description</label>
      <input type="text" class="form-control" id="description">
   </div>
-   <button type="submit" class="btn btn-primary">Create Project</button>
+   <button type="submit" class="btn btn-success">Create Project</button>
  </form>
-   
     `
-
-    
    renderToDom("#projectForm", domString);
  };
 
 
 
- rectangle1(rectangle);
- rectangle3();
 
 
-// const startApp = () => {
-//     rectangle1(yomama);
 
+const startApp = () => {
+    rectangle1(rectangle);
+    rectangle3();
+};
 
-// };
   startApp();
