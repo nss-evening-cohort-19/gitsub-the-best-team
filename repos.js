@@ -49,25 +49,26 @@ export const myRepoCards = () => {
 
 export const myRepoForm = () => {
   let domString = `
+  <h4>Create New Repository</h4>
   <form>
-  <div class="mb-3">
-  <label for="exampleFormControlInput1" class="form-label">Package Name</label>
-  <input type="text" class="form-control" id="name" placeholder="Example 1">
-  </div>
- <div class="mb-3">
- <label for="exampleFormControlInput1" class="form-label">Description</label>
- <input type="text" class="form-control" id="info" placeholder="Optional">
-  </div>
- <div class="mb-3">
- <label for="exampleFormControlInput1" class="form-label">Link</label>
- <input type="text" class="form-control" id="type" placeholder="Link">
- </div>
- <div class="mb-3">
- <label for="exampleFormControlInput1" class="form-label">Description</label>
- <input type="text" class="form-control" id="tags" placeholder="Optional">
-  </div>
- <hr>
- <button class="btn btn-success" type="submit">Create New Package</button>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Repository Name</label>
+      <input type="text" class="form-control" id="name" placeholder="Example 1">
+     </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Repository Info</label>
+      <input type="text" class="form-control" id="info" placeholder="Optional">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">File Type</label>
+      <input type="text" class="form-control" id="type" placeholder="Link">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">File Tags</label>
+      <input type="text" class="form-control" id="tags" placeholder="Optional">
+    </div>
+    <hr>
+    <button class="btn btn-success" type="submit">Create New Repo</button>
   </form>
   `;
   renderToDom('#repoFormContainer', domString);
