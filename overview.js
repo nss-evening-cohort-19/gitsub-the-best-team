@@ -1,3 +1,7 @@
+//import { rendertoDom } from "./main.js";
+
+
+
 const renderToDom = (divId, textToRender) => {
   const selectedElement = document.querySelector(divId);
   selectedElement.innerHTML = textToRender
@@ -120,3 +124,32 @@ export const pinned = [
 
 renderToDom("#pinnedFormContainer", domString);
 }
+
+//Overview Event Listener
+
+export const pinnedEventListeners = () => {
+  const form = document.querySelector("form");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const newPinnedCard = {
+      id: repos.length + 1,
+      name: document.querySelector("#title").value,
+      info: document.querySelector("#body").value,
+    
+    };
+    pinned.push(newPinnedCard);
+    renderRepos(pinned);
+    form.reset();
+  });
+};
+
+
+
+
+function startApp () {
+  renderRepos(pinned);
+  newPinnedForm();
+  pinnedEventListeners();
+};
+startApp();
