@@ -116,8 +116,7 @@ body {
   box-sizing: border-box;
   }
   
-
-#repoPins {
+#repoContainer {
   box-sizing: border-box;
   position: absolute;
   width: 1251px;
@@ -129,6 +128,15 @@ body {
   flex-flow: row wrap;
 }
 
+#repoFormContainer{
+  box-sizing: border-box;
+  position: absolute;
+  width: 1226px;
+  height: 478px;
+  left: 678px;
+  top: 1233px;
+  border: 4px solid
+}
 .rectangle1 {
   box-sizing: border-box;
   position: absolute;
