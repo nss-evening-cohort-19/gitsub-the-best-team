@@ -1,4 +1,4 @@
-import { renderToDom } from "./main.js"
+import { renderToDom } from "./main.js";
 
 export const packagesList = [
   {
@@ -44,19 +44,34 @@ export const packagesCardsOnDom = (cards) => {
   let domString = "";
   for (const pack of packagesList) {
       domString += 
-      `<div id="packagesCards" class="card" style="width: 18rem;">
-
+      `<div id="packagesCards" class="card-deck" style="width: 18rem;">
+        <div class="card" style="width: 18rem;">
           <div class="card-body card-body text-center" style="background:black; color:white">
-            <h5 class="card-title">${pack.name}</h5>
+            <h4 class="card-title">${pack.name}</h4>
             <p class="card-text">${pack.description}</p>
-            <button id="link" type="button" class="btn btn-success ${pack.learnMoreLink}">Learn More</button>
-            <button class="btn btn-success text-end btn-sm float-right" 
-          id="delete--${pack.id}">x</button>
+            <a href="${pack.learnMoreLink}"button id="link" type="button" class="btn btn-success">Learn More</a>
+            <a href="#"button class="btn btn-success text-end btn-sm float-right" 
+          id="delete--${pack.id}">x</a>
           </div>
-
+        </div>
       </div>`;
   }
     renderToDom('#packagesContainer', domString);
+}
+
+
+// // SEARCH
+export const searchPackage = () =>{
+  const searchPackages = 
+  `<form>
+    <div class="form-container" id="form-container">
+      <div id="search"class="form-floating mb-3">
+        <input type="text" class="form-control" id="searchInput" placeholder="SEARCH">
+        <label for="searchInput">Search</label>
+      </div>
+    </div>
+  </form>`;
+  renderToDom('#packafeSearchContainer', searchPackages);
 }
 
 
@@ -64,9 +79,6 @@ export const packagesCardsOnDom = (cards) => {
 export const newPackageForm = () => {
   const domString = 
   `<h4>Create New Package</h4>
-    <p>
-    <h6>Create New Package</h6>
-    </p>
   <form>
     <div class="mb-3">
      <label for="exampleFormControlInput1" class="form-label">Package Name</label>
@@ -81,7 +93,7 @@ export const newPackageForm = () => {
     <input type="text" class="form-control" id="link" placeholder="Link">
     </div>
     <hr>
-    <button class="btn btn-success" type="save">Create New Package</button>
+    <button class="btn btn-success" type="submit">Create New Package</button>
   </form>`;
 renderToDom("#packagesFormContainer", domString);
 }
@@ -90,18 +102,19 @@ renderToDom("#packagesFormContainer", domString);
 export const packagesEventListeners = () => {
   // LOGIC FOR FORM SUBMIT
   const form = document.querySelector("form");
-  form.addEventListener("save", (e) => {
+  form.addEventListener("submit", (e) => {
     e.preventDefault();
 
     const newPackage = {
+    id: packagesList.length + 1,
     name: document.querySelector("#packagesName").value,
     description: document.querySelector("#description").value,
-    link: document.querySelector("#learnMoreLink").value,
+    link: document.querySelector("#link").value
     }
 
 // push that object to the data array   
     packagesList.push(newPackage);
-    packageOptions(packagesList);
+    packagesCardsOnDom(packagesList);
 //reset form
     form.reset();
   });
@@ -110,17 +123,12 @@ export const packagesEventListeners = () => {
   document.querySelector("#packagesContainer").addEventListener("click", (e) => {
     if (e.target.id.includes("delete")) {
       const [method, id] = e.target.id.split("--");
-      const removed = packageData.findIndex(pkg => pkg.id === parseInt(id));
-      packageData.splice(removed, 1);
-      packageOptions(packagesList);
+      const removed = packagesList.findIndex(pkg => pkg.id === parseInt(id));
+      packagesList.splice(removed, 1);
+      packagesCardsOnDom(packagesList);
     }
   });
 }
-
-
-
-
-
 
 
 function startApp () {
