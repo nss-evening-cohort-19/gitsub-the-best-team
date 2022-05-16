@@ -155,6 +155,8 @@ body {
   top: 129px;
   /* border: 4px solid; */
   /* display: flex; */
+  display: flex;
+  flex-flow: row wrap;
 }
 
 #pinnedFormContainer{
@@ -178,14 +180,3 @@ body {
   top: 129px;
   border: 4px;
 } 
-
-#pinnedFormContainer {
-display: flex;
-box-sizing: border-box;
-position: absolute;
-width: 1226px;
-height: 664px;
-left: 663px;
-top: 764px;
-/* border: 4px solid; */
-}
