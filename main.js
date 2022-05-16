@@ -5,9 +5,3 @@ export const renderToDom = (divId, textToRender) => {
   const selectedElement = document.querySelector(divId);
   selectedElement.innerHTML = textToRender;
 };
-const startApp = () => {
-  myRepoCards(repos);
-  myRepoForm();
-  repoEventListeners();
-};
-startApp();
