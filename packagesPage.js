@@ -49,20 +49,31 @@ export const packagesCardsOnDom = (cards) => {
   let domString = "";
   for (const pack of packagesList) {
       domString += 
-      `<div id="packagesCards" class="card-deck" style="width: 18rem;">
-        <div class="card" style="width: 18rem;">
-          <div class="card-body card-body text-center" style="background:black; color:white">
-            <h4 class="card-title">${pack.name}</h4>
-            <p class="card-text">${pack.description}</p>
-            <a href="${pack.learnMoreLink}"button id="link" type="button" class="btn btn-success">Learn More</a>
-            <a href="#"button class="btn btn-success text-end btn-sm float-right" 
-          id="delete--${pack.id}">x</a>
-          </div>
+      `<div class="card" style="width: 18rem;">
+        <h4 class="card-title">${pack.name}</h4>
+        <div class="card-body>
+          <p class="card-text">${pack.description}</p>
+          <a href="${pack.learnMoreLink}"button id="link" type="button" class="btn btn-success">Learn More</a>
+          <a href="#"button class="btn btn-success text-end btn-sm float-right" id="delete--${pack.id}">x</a>
         </div>
-      </div>`;
+      </div>
+     `;
   }
     renderToDom('#packagesContainer', domString);
 }
+
+// `<div id="packagesCards" class="card-deck" style="width: 18rem;">
+// <div class="card" style="width: 18rem;">
+//   <div class="card-body card-body text-center" style="background:black; color:white">
+//     <h4 class="card-title">${pack.name}</h4>
+//     <p class="card-text">${pack.description}</p>
+//     <a href="${pack.learnMoreLink}"button id="link" type="button" class="btn btn-success">Learn More</a>
+//     <a href="#"button class="btn btn-success text-end btn-sm float-right" 
+//   id="delete--${pack.id}">x</a>
+//   </div>
+// </div>
+// </div>`;
+
 
 
 // // SEARCH
@@ -86,16 +97,16 @@ export const newPackageForm = () => {
   `<h4>Create New Package</h4>
   <form>
     <div class="mb-3">
-     <label for="exampleFormControlInput1" class="form-label">Package Name</label>
-     <input type="text" class="form-control" id="packagesName" placeholder="Example 1">
+      <label for="exampleFormControlInput1" class="form-label">Package Name</label>
+      <input type="text" class="form-control" id="packagesName" placeholder="Example 1">
      </div>
     <div class="mb-3">
-    <label for="exampleFormControlInput1" class="form-label">Description</label>
-    <input type="text" class="form-control" id="description" placeholder="Optional">
-     </div>
+      <label for="exampleFormControlInput1" class="form-label">Description</label>
+      <input type="text" class="form-control" id="description" placeholder="Optional">
+    </div>
     <div class="mb-3">
-    <label for="exampleFormControlInput1" class="form-label">Link</label>
-    <input type="text" class="form-control" id="link" placeholder="Link">
+      <label for="exampleFormControlInput1" class="form-label">Link</label>
+      <input type="text" class="form-control" id="link" placeholder="Link">
     </div>
     <hr>
     <button class="btn btn-success" type="submit">Create New Package</button>
