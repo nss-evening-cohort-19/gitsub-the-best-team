@@ -1,5 +1,5 @@
 //5 projects loop//
-import { renderToDom } from "./main";
+import { renderToDom } from "./main.js";
 
 export const rectangle = [
     {
@@ -37,7 +37,7 @@ export const rectangle = [
         description: "Project Practice",
         type: "Public",
         time: "Updated 27 hours ago",
-    },
+    }
 
 ];
 
@@ -91,11 +91,12 @@ export const rectangle1 = (yomama) => {
                 </div>`;
  
             }
+    renderToDom("#rectangle1", domString);
 }
-renderToDom("#rectangle1", domString);
 
 
-rectangle1()
+
+// rectangle1()
 
 
 // //Rectangle 1/ - Sort scroll with 5 projects//
@@ -171,10 +172,10 @@ rectangle1()
 // rectangle3();
 
 
-const startApp = () => {
-    rectangle1(yomama);
+// const startApp = () => {
+//     rectangle1(yomama);
 
 
-};
+// };
 
-startApp();
+// startApp();

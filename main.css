@@ -67,7 +67,7 @@ body {
   width: auto !important;
   height: 185px !important;
   justify-content: center;
-  flex-flow: row wrap;
+  /* flex-flow: row wrap; */
   
 }
 
