@@ -80,6 +80,7 @@ export const repoEventListeners = () => {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     const newRepoCard = {
+      id: repos.length + 1,
       name: document.querySelector("#name").value,
       info: document.querySelector("#info").value,
       type: document.querySelector("#type").value,
