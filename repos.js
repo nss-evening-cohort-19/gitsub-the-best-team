@@ -1,4 +1,4 @@
-// import { renderToDom } from "./main.js"
+import { renderToDom } from "./main.js"
 
 export const repos = [
   {
@@ -42,7 +42,7 @@ export const myRepoCards = () => {
   </div>
  `;
   }
-  renderToDom("#repoContainer", domString);
+  renderToDom('#repoContainer', domString);
 };
 
 export const myRepoForm = () => {
@@ -71,7 +71,7 @@ export const myRepoForm = () => {
   <button type="submit" class="btn btn-primary me-md-2" type="button">Create Repository</button>
   </form>
   `;
-  renderToDom("#repoFormContainer", domString);
+  renderToDom('#repoFormContainer', domString);
 };
 
 export const repoEventListeners = () => {
@@ -84,7 +84,7 @@ export const repoEventListeners = () => {
       name: document.querySelector("#name").value,
       info: document.querySelector("#info").value,
       type: document.querySelector("#type").value,
-      tags: document.querySelector("#tags").value,
+      tags: document.querySelector("#tags").value
     };
     repos.push(newRepoCard);
     myRepoCards(repos);
@@ -92,7 +92,7 @@ export const repoEventListeners = () => {
   });
 };
 
-const startApp = () => {
+function startApp () {
   myRepoCards(repos);
   myRepoForm();
   repoEventListeners();
