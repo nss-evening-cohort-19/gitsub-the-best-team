@@ -2,24 +2,28 @@ import { renderToDom } from "./main.js"
 
 export const repos = [
   {
+    id: 1,
     name: "my-first-repo",
     info: "I am a young developer and I have no clue what I'm doing.",
     type: "JavaScript",
     tags: "Netlify, Countdown, GoldenFleece",
   },
   {
+    id: 2,
     name: "running-and-gunning",
     info: "I'm from the West Coast baby, sling that thing!",
     type: "HTML",
     tags: "React, Jamstack",
   },
   {
+    id: 3,
     name: "Ice-Age-Moves",
     info: "Moves so cold you'll catch a runny nose",
     type: "HTML",
     tags: "Netlify, React",
   },
   {
+    id: 4,
     name: "your-favorite-song",
     info: "It go like, count that stack, pop that cap then down that jack.",
     type: "Javascript",
